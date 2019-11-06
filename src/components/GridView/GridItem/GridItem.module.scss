@@ -1,0 +1,146 @@
+@import '../../../styles/mixins.scss';
+
+.Grid {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+    background-color: #13bbd3;
+    margin: 1rem;
+    border: 3px solid #009eb4;
+    text-align: center;
+
+    @include breakpoint (xs) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, calc(100vw / 2 - 2.4rem));
+        grid-gap: 1.2em;
+        padding: 1.2em;
+    }
+
+    @include breakpoint (md) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, calc(100vw / 3 - 2.4rem));
+        grid-gap: 1.2em;
+        padding: 1.2em;
+    }
+
+    @include breakpoint (lg) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, calc(100vw / 4 - 2.4rem));
+        grid-gap: 1.2em;
+        padding: 1.2em;
+    }
+
+    .inner {
+        padding-top: 10px;
+
+        @include breakpoint (xs) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            padding-top: 20px;
+        }
+    
+        @include breakpoint (sm) {
+            padding-top: 25px;
+        }
+
+        @include breakpoint (md) {
+            padding-top: 40px;
+        }
+
+        @include breakpoint (sm) {
+            padding-top: 50px;
+        }
+    }
+
+    .grid_item {
+        
+        position: relative;
+        grid-column: span 1;
+        grid-row: span 1;
+        background-color: white;
+        box-shadow: 0 1px 1px 2px rgba(50,143,157,1);
+        
+    
+        .location_info {
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            padding: 0 10px;
+    
+            @include breakpoint (md) {
+                font-size: 2rem;
+                margin-bottom: 2.5rem;
+                padding: 0;
+            }
+        }
+    
+        .location {
+            background-color: #cccccc;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0 auto;
+            color: #313130;
+            line-height: 50px;
+            text-align: center;
+    
+            @include breakpoint (xs) {
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                font-size: 1.5rem;
+            }
+    
+            @include breakpoint (sm) {
+                height: 100px;
+                width: 100px;
+                font-size: 3rem;
+                line-height: 100px;
+            }
+        }
+    
+        img {
+            object-fit: cover;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+    
+            @include breakpoint (xs) {
+                height: 50px;
+                width: 50px;
+            }
+    
+            @include breakpoint (sm) {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    
+        p {
+            display: block;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            overflow: hidden;
+            max-height: 4rem;
+            line-height: 1rem;
+            font-weight: 500;
+            padding: 0 15px;
+    
+            @include breakpoint (xs) {
+                 max-height: 3.6rem;
+                line-height: 1.2;
+            }
+    
+            @include breakpoint (sm) {
+                max-height: 4.8rem;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,45 @@
+// @mixin atSmall {
+// 	@media (min-width: 530px) {
+// 		@mixin-content;
+// 	}
+// }
+
+// @define-mixin atMedium {
+// 	@media (min-width: 800px) {
+// 		@mixin-content;
+// 	}
+// }
+
+// @define-mixin atLarge {
+// 	@media (min-width: 1024px) {
+// 		@mixin-content;
+// 	}
+// }
+
+// @define-mixin atLarger {
+// 	@media (min-width: 1460px) {
+// 		@mixin-content;
+// 	}
+// }
+
+@mixin breakpoint($class) {
+    @if $class == xs {
+      @media (min-width: 530px) { @content; }
+    }
+   
+    @else if $class == sm {
+      @media (min-width: 800px) { @content; }
+    }
+   
+    @else if $class == md {
+      @media (min-width: 1024px) { @content; }
+    }
+   
+    @else if $class == lg {
+      @media (min-width: 1460px) { @content; }
+    }
+   
+    @else {
+      @warn "Breakpoint mixin supports: xs, sm, md, lg";
+    }
+  }

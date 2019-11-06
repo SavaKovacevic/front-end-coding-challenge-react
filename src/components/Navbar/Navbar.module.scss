@@ -1,0 +1,84 @@
+@import '../../styles/mixins.scss';
+
+.Navbar { 
+    background-color: #13bbd3;
+    display: block;
+    border-bottom: 3px solid #009eb4;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+
+    @include breakpoint(sm) {
+        text-align: left;
+        padding-top: 0;
+      }
+  }
+  
+.logo {
+    display: block;
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 3rem;
+
+    @include breakpoint(sm) {
+        display: inline-block;
+        vertical-align: middle;
+        width: 28%;
+        padding-left: 1rem;
+        font-size: 3rem;
+        font-weight: 400;
+        line-height: 4rem;
+      }
+  }
+  
+  ul {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+
+    @include breakpoint(sm) {
+        display: inline-block;
+        width: 70%;
+        margin: 0;
+      }
+  }
+  
+  ul > li, ul > li > a {
+    list-style: none;
+    display: block;
+    width: 160px;
+    text-align: center;
+    color: #a2d9e6;
+    line-height: 3rem;
+    border-bottom: 3px solid transparent;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-decoration: none;
+
+    @include breakpoint(sm) {
+        color: #a2d9e6;
+        display: inline-block;
+        font-size: 1.2rem;
+        line-height: 4rem;
+      }
+
+      @include breakpoint(md) {
+        width: 230px;
+      }
+  }
+  
+  ul > li:hover,
+  ul > li:active {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .active {
+    color: white;
+    border-bottom: 3px solid #fdee2d;
+    cursor: pointer;
+  }

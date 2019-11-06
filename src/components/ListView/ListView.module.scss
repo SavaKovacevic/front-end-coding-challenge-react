@@ -1,0 +1,14 @@
+@import '../../styles/mixins.scss';
+
+.List {
+    display: block;
+    width: auto;
+    background-color: #13bbd3;
+    margin: .5rem;
+    border: 3px solid #2da0b1;
+    text-align: center;
+
+    @include breakpoint (sm) {
+        margin: 1rem;
+    }
+}

@@ -1,0 +1,131 @@
+@import '../../../styles/mixins.scss';
+
+
+.list_item {
+    height: 100px;
+    display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center; 
+
+    @include breakpoint (xs) {
+        height: 150px;
+    }
+
+    .info {
+        display: flex;
+        height: 100px;
+        line-height: 100px;
+        text-align: left;
+        border-bottom: 3px solid #2da0b1;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        @include breakpoint (xs) {
+            height: 150px;
+            line-height: 150px;
+        }
+
+        @include breakpoint (sm) {
+            width: 85%;
+        }
+
+        @include breakpoint (md) {
+            width: 90%;
+        }
+
+        .location_info {
+            display: block;
+            line-height: normal;
+            color: white;
+            font-weight: 400;
+            font-size: 1.2rem;
+            margin: 0 0 10px 0;
+    
+            @include breakpoint (xs) {
+                font-size: 1.5rem;
+            }
+    
+            @include breakpoint (sm) {
+                font-size: 1.7rem;
+            }
+    
+            @include breakpoint (md) {
+                font-size: 1.9rem;
+            }
+        }
+
+        p {
+            display: block;
+            line-height: normal;
+            color: #2f5a5e;
+            font-weight: 400;
+            font-size: 1rem;
+            margin: 0;
+            text-overflow: ellipsis;
+            word-wrap: break-word;
+            overflow: hidden;
+            max-height: 1.2em;
+    
+            @include breakpoint (xs) {
+                font-size: 1.3rem;
+            }
+    
+            @include breakpoint (sm){
+                font-size: 1.5rem;
+            }
+    
+            @include breakpoint (md){
+                font-size: 1.7rem;
+            }
+        }
+    }
+
+    .flag {
+        width: 20%;
+        display: inline-block;
+
+        @include breakpoint (sm) {
+            width: 15%;
+        }
+
+        @include breakpoint (md) {
+            width: 10%;
+        }
+
+        img {
+            object-fit: cover;
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            margin: 0 auto;
+    
+            @include breakpoint (xs) {
+                height: 70px;
+                width: 70px;
+    
+            }
+        }
+    }
+
+    .location {
+        background-color: #cccccc;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 0 auto;
+        color: #313130;
+        line-height: 50px;
+        text-align: center;
+
+        @include breakpoint (xs) {
+            height: 70px;
+            width: 70px;
+            line-height: 70px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.loader_overlay {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #13bbd3;
+}
+
+.loader {
+    border: 10px solid #fff;
+    border-radius: 50%;
+    border-top: 10px solid #13bbd3;
+    width: 100px;
+    height: 100px;
+    animation: load 2s linear infinite;
+}
+
+@keyframes load {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
