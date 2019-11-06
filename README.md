@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Maps
 
-Insert your google maps api key in src/components/MapLocation/Map.js to see google map with locations
+Insert your google maps api key in src/components/MapLocations/Map.js to see google map with locations
 
 ## Available Scripts
 
